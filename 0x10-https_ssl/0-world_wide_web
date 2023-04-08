@@ -2,7 +2,7 @@
 # Displays information about subdomains.
 
 # uncomment for debugging purposes.
-# set -x
+#set -x
 
 # for the checker to work please remove the colors
 
