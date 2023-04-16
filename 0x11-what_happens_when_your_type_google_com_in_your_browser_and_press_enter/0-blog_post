@@ -1,0 +1,27 @@
+When you type https://www.google.com in your browser and press Enter, a complex series of events occur behind the scenes to bring up the webpage. In this blog post, we'll take a closer look at each of the steps involved in loading a website.
+
+DNS Request
+The first step in loading a website is to resolve the domain name to an IP address using the Domain Name System (DNS). The browser sends a request to a DNS resolver to look up the IP address associated with the domain name "www.google.com". The DNS resolver searches for the IP address associated with the domain name and returns it to the browser.
+
+TCP/IP
+After the IP address is obtained, the browser initiates a Transmission Control Protocol (TCP) connection to the server associated with that IP address. The browser sends a message to the server requesting the webpage.
+
+Firewall
+The server is typically behind a firewall, which acts as a security barrier between the internet and the server. The firewall checks the incoming message to ensure that it meets the security policies of the server.
+
+HTTPS/SSL
+If the server is configured to use HTTPS, then a Secure Sockets Layer (SSL) or Transport Layer Security (TLS) handshake occurs. The SSL/TLS handshake establishes an encrypted connection between the server and the browser. The browser and server negotiate the encryption algorithm and exchange keys for encrypting and decrypting data.
+
+Load-balancer
+If the website is hosted on multiple servers, a load balancer distributes the incoming requests among them. This helps to balance the traffic and ensure that the servers are not overloaded.
+
+Web server
+The server then receives the request from the browser and processes it. The web server retrieves the webpage requested by the browser and sends it back to the browser using the TCP/IP connection established earlier.
+
+Application server
+In some cases, the web server may not have the necessary data to complete the request. In such cases, the request is forwarded to an application server, which retrieves the necessary data and returns it to the web server. The web server then sends the complete webpage to the browser.
+
+Database
+The application server may need to access a database to retrieve the required data. The application server sends a query to the database server and retrieves the data. The data is then sent back to the application server, which sends it to the web server for transmission to the browser.
+
+In conclusion, when you type https://www.google.com in your browser and press Enter, a complex series of events occur behind the scenes, including DNS request, TCP/IP, firewall, HTTPS/SSL, load-balancer, web server, application server, and database. Understanding these steps can help you troubleshoot website loading issues and appreciate the complexity of modern web technology.
