@@ -1,0 +1,40 @@
+Sure, here's a schema illustrating the flow of the request when you type https://www.google.com in your browser and press Enter:
+
+lua
+Copy code
++----------------------+       +----------------------+       +----------------------+
+|     DNS resolver     |       |       Firewall       |       |    Load balancer     |
++----------------------+       +----------------------+       +----------------------+
+           |                          |                            |
+           |                          |                            |
+  Resolves DNS name             Allows traffic                Distributes traffic
+    to IP address                on appropriate                 among multiple
+           |                         port                        web servers
+           |                          |                            |
+           +--------------------------+----------------------------+
+                                             |
+                                             |
+                                    +--------+--------+
+                                    |  Web server     |
+                                    +----------------+
+                                             |
+                                             |
+                                    +--------+--------+
+                                    | Application server |
+                                    +-------------------+
+                                             |
+                                             |
+                                    +--------+--------+
+                                    |      Database     |
+                                    +-------------------+
+Here's a brief description of each step:
+
+When you type https://www.google.com in your browser, your computer first needs to resolve the domain name "www.google.com" to an IP address. This is done through a DNS resolver, which looks up the IP address associated with the domain name.
+Once the IP address is obtained, your computer sends a request to that IP address on the appropriate port (usually port 443 for HTTPS traffic).
+The traffic between your computer and the server is encrypted using SSL/TLS to ensure privacy and security.
+The traffic goes through a firewall, which is a security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules.
+The request is then distributed among multiple web servers by a load balancer, which helps to distribute the workload evenly among the servers.
+The web server that receives the request generates a response by serving a web page. The web page may be static or dynamic (generated on the fly).
+If the web page is dynamic, the web server may request data from an application server, which generates the web page based on the request and data from the database.
+The application server retrieves the required data from the database and generates a dynamic web page, which is sent back to the web server.
+The web server then sends the response back to your computer, which displays the web page in your browser.
