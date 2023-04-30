@@ -1,4 +1,4 @@
-iiwyyi#!/usr/bin/env bash
+#!/usr/bin/env bash
 # Installs Nginx with the following configurations:
 ## server
 ## Nginx should be listening on port 80
@@ -28,3 +28,4 @@ printf %s "server {
 " > /etc/nginx/sites-available/default
 
 service nginx restart
+
